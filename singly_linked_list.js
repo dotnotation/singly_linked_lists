@@ -28,14 +28,17 @@ class SinglyLinkedList{
         // if there is no head, set the head and tail to be the new node
         // otherwise set the next property on the tail to be the new node
         // and set the tail property on the list to be the new node
+        // increment the length by one
         let new = new Node(val)
 
         if (!head){ 
             this.head = new
             this.tail = new
+            this.length += 1
         } else {
             this.tail = new
             this.tail.next = new
+            this.length += 1
         }
     }
 }
