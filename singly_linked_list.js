@@ -77,6 +77,10 @@ class SinglyLinkedList{
         this.tail.next = null
         // have to sever the connection by setting next to null
         this.length--
+        if (this.length === 0){
+            this.head = null
+            this.tail = null
+        }
         return current
     }
 }
