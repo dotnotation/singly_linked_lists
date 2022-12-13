@@ -42,4 +42,34 @@ class SinglyLinkedList{
 
         return this
     }
+
+    traverse(){
+        let current = this.head
+        while (current){
+            current = current.next
+        }
+    }
+
+    pop(){
+        // remove a node from the end
+        // remember that you can't just access the tail, you must start from the head
+        // doesn't take in anything 
+        // if there are no nodes in the list, return undefined
+        // loop until you reach tail
+        // set the next property of the 2nd to the last node to null
+        // so need a temp and pre variable
+        // set the tail to be the 2nd to last node
+        // subtract one from the length 
+        // return the value of the node that was removed
+        if (!head){
+            return undefined
+        } 
+        let pre = this.head
+        let temp = this.head.next
+        while (temp !== this.tail){
+           pre = this.head.next
+        }
+        this.length--
+        return temp
+    }
 }
