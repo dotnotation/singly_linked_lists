@@ -61,15 +61,22 @@ class SinglyLinkedList{
         // set the tail to be the 2nd to last node
         // subtract one from the length 
         // return the value of the node that was removed
-        if (!head){
+        // if there is only one item left, it will still leave a head even after the value is taken away
+        if (!this.head){
             return undefined
         } 
-        let pre = this.head
-        let temp = this.head.next
-        while (temp !== this.tail){
-           pre = this.head.next
+        let current = this.head
+        let newTail = current
+        // newTail is always lagging behind current 
+        // while current.next isn't null
+        while (current.next){
+           newTail = current
+           current = current.next
         }
+        this.tail = newTail
+        this.tail.next = null
+        // have to sever the connection by setting next to null
         this.length--
-        return temp
+        return current
     }
 }
