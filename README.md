@@ -5,6 +5,8 @@ This section is about Singly Linked Lists.
 
 What is a linked list?
 - an ordered list with fast inserts/removals at the beginning and end
+    - as compared to arrays where `shift` and `unshift` are costly
+    - although random access is not allowed
 - a data structure that contains a head, tail, and length property
 	- from the head you can figure out the next element 
 	- think of it as a skyscraper without an elevator, you have to take the stairs and access each floor individually from the beginning
