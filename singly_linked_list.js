@@ -29,15 +29,15 @@ class SinglyLinkedList{
         // otherwise set the next property on the tail to be the new node
         // and set the tail property on the list to be the new node
         // increment the length by one
-        let new = new Node(val)
+        const newNode = new Node(val)
 
         if (!head){ 
-            this.head = new
-            this.tail = new
+            this.head = newNode
+            this.tail = newNode
             this.length += 1
         } else {
-            this.tail = new
-            this.tail.next = new
+            this.tail = newNode
+            this.tail.next = newNode
             this.length += 1
         }
     }
