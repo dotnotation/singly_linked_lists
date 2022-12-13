@@ -31,14 +31,15 @@ class SinglyLinkedList{
         // increment the length by one
         const newNode = new Node(val)
 
-        if (!head){ 
+        if (!this.head){ 
             this.head = newNode
-            this.tail = newNode
-            this.length += 1
+            this.tail = this.head
         } else {
-            this.tail = newNode
             this.tail.next = newNode
-            this.length += 1
+            this.tail = newNode
         }
+        this.length++
+
+        return this
     }
 }
