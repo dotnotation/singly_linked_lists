@@ -90,6 +90,7 @@ class SinglyLinkedList{
         // take .next and make that the new head
         // length--
         // return the value of the node removed
+        
         if (!this.head){
             return undefined
         }
@@ -97,6 +98,10 @@ class SinglyLinkedList{
         let oldHead = this.head
         this.head = oldHead.next
         this.length--
+        if (this.length === 0){
+            // need to account for when the head is null but the tail still has a node
+            this.tail = null
+        }
         return oldHead
     }
 
