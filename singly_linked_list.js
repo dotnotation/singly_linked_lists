@@ -142,7 +142,7 @@ class SinglyLinkedList{
         return current
     }
 
-    set(idx, value){
+    set(idx, val){
         // change the value of a node based on its position
         // takes in the index and a new value
         // use the get function to find the node
@@ -158,7 +158,6 @@ class SinglyLinkedList{
             foundNode.val = val
         }
         return true
-
     }
 
 }
