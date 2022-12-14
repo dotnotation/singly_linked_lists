@@ -83,4 +83,21 @@ class SinglyLinkedList{
         }
         return current
     }
+
+    shift(){
+        // if there are no nodes, return undefined
+        // var = current head
+        // take .next and make that the new head
+        // length--
+        // return the value of the node removed
+        if (!this.head){
+            return undefined
+        }
+
+        let oldHead = this.head
+        this.head = oldHead.next
+        this.length--
+        return oldHead
+    }
+
 }
