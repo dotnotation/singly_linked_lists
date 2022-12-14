@@ -142,4 +142,23 @@ class SinglyLinkedList{
         return current
     }
 
+    set(idx, value){
+        // change the value of a node based on its position
+        // takes in the index and a new value
+        // use the get function to find the node
+        // if node not found return false
+        // if node is found, set the value to be the value passed to the function
+        // return true
+
+        let foundNode = this.get(idx)
+
+        if (!foundNode) {
+            return false
+        } else {
+            this.val = val
+        }
+        return true
+
+    }
+
 }
