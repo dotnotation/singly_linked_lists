@@ -160,4 +160,25 @@ class SinglyLinkedList{
         return true
     }
 
+    insert(idx, val){
+        // add/ create a new node and the specified position
+        // if this index is the same as the length, push a new node to the tail
+        // if index is 0 unshift a new node to the start of the list
+        // otherwise use get and access the node at the index - 1
+        // set the next property on that node to be the new node
+        // set the next property on the newNode to be the previous next
+        // increment length
+        // return true
+
+        let newNode = new Node(val)
+
+        if (idx < 0 || idx > this.length) return false
+
+        if (idx === this.length){
+            this.push(newNode.val)
+        }
+
+        
+    }
+
 }
