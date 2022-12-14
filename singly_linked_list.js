@@ -170,15 +170,23 @@ class SinglyLinkedList{
         // increment length
         // return true
 
-        let newNode = new Node(val)
-
         if (idx < 0 || idx > this.length) return false
 
         if (idx === this.length){
-            this.push(newNode.val)
+            this.push(val)
         }
 
+        if (idx === 0){
+            this.unshift(val)
+        }    
         
+        let newNode = new Node(val)
+        let prevNode = this.get(idx - 1)
+        prevNode.next = newNode
+        newNode.next = prevNode.next
+        this.length++
+        return true
+
     }
 
 }
