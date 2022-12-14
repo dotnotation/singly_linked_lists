@@ -128,7 +128,18 @@ class SinglyLinkedList{
     get(idx){
         // given an index, return that node
         // since there is no index, you have to manual count
+        // loop until idx and return that node
+        // count variable
         if (idx < 0 || idx >= this.length) return null
+
+        let counter = 0
+        let current = this.head
+
+        while (counter !== idx){
+            current = current.next
+            counter++
+        }
+        return current
     }
 
 }
