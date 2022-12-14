@@ -105,4 +105,19 @@ class SinglyLinkedList{
         return oldHead
     }
 
+    unshift(val){
+        // adding a new node to the beginning 
+        // create a newNode using the value passed
+        // if no head set the head and tail to the newNode
+        // oldHead 
+        // point the nextHead to the oldHead
+        // move oldHead to be nextHead
+        let newNode = new Node(val)
+
+        if (!this.head){
+            this.head = newNode
+            this.tail = newNode
+        }
+    }
+
 }
