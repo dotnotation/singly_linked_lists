@@ -155,7 +155,7 @@ class SinglyLinkedList{
         if (!foundNode) {
             return false
         } else {
-            this.val = val
+            foundNode.val = val
         }
         return true
 
