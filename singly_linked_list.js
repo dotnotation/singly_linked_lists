@@ -125,4 +125,10 @@ class SinglyLinkedList{
         return this
     }
 
+    get(idx){
+        // given an index, return that node
+        // since there is no index, you have to manual count
+        if (idx < 0 || idx >= this.length) return null
+    }
+
 }
