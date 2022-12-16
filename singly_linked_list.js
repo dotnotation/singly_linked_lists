@@ -190,8 +190,8 @@ class SinglyLinkedList{
 
         if (idx < 0 || idx >= this.length) return undefined 
         // we can't remove the last index
-        if (idx === this.length - 1) return this.pop(idx)
-        if (idx === 0) return this.shift(idx)
+        if (idx === this.length - 1) return this.pop()
+        if (idx === 0) return this.shift()
 
         let prevNode = this.get(idx - 1)
         let removeNode = prevNode.next 
