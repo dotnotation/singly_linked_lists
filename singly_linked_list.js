@@ -183,4 +183,21 @@ class SinglyLinkedList{
         return true
     }
 
+    remove(idx){
+        // remove a node from a specified index 
+        // find node
+        // take the prevNode and set its .next to the foundNode.next
+
+        if (idx < 0 || idx >= this.length) return undefined 
+        // we can't remove the last index
+        if (idx === this.length - 1) return this.pop(idx)
+        if (idx === 0) return this.shift(idx)
+
+        let prevNode = this.get(idx - 1)
+        let removeNode = prevNode.next 
+        prevNode.next = removeNode.next
+        this.length--
+        return removeNode.val
+    }
+
 }
