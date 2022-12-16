@@ -16,3 +16,9 @@ What is a linked list?
 	- each node has a value and a pointer to another node || null
 - a bunch of elements with no index pointing to the next element
 - you have to start at the beginning to access elements
+
+- Big O
+    - insertion O(1)
+    - removal O(1) or O(n)
+    - searching O(n)
+    - access O(n)
