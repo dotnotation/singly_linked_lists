@@ -222,8 +222,14 @@ class SinglyLinkedList{
         prevNode = current 
         current = nextNode
     }
-    
+
     return this
    } 
 
 }
+
+// Big O
+    // insertion O(1)
+    // removal O(1) or O(n)
+    // searching O(n)
+    // access O(n)
