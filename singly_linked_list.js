@@ -197,7 +197,7 @@ class SinglyLinkedList{
         let removeNode = prevNode.next 
         prevNode.next = removeNode.next
         this.length--
-        return removeNode.val
+        return removeNode
     }
 
 }
