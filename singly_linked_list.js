@@ -178,11 +178,11 @@ class SinglyLinkedList{
         
         let newNode = new Node(val)
         let prevNode = this.get(idx - 1)
+        let temp = prevNode.next
         prevNode.next = newNode
-        newNode.next = prevNode.next
+        newNode.next = temp
         this.length++
         return true
-
     }
 
 }
