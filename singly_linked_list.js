@@ -169,12 +169,10 @@ class SinglyLinkedList{
         // set the next property on the newNode to be the previous next
         // increment length
         // return true
-
         if (idx < 0 || idx > this.length) return false
-
-        if (idx === this.length) return this.push(val)
-
-        if (idx === 0) return this.unshift(val) 
+        if (idx === this.length) return !!this.push(val)
+        // using !! so that we can return either true or false as these methods return the list
+        if (idx === 0) return !!this.unshift(val) 
         
         let newNode = new Node(val)
         let prevNode = this.get(idx - 1)
