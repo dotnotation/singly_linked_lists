@@ -218,9 +218,12 @@ class SinglyLinkedList{
 
     for (let i = 0; i < this.length; i++){
         nextNode = current.next 
-        
+        current.next = prevNode
+        prevNode = current 
+        current = nextNode
     }
-
+    
+    return this
    } 
 
 }
