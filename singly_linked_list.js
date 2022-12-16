@@ -210,15 +210,14 @@ class SinglyLinkedList{
     // set preNode to be current
     // set current to be the value of nextNode
 
-    let newHead = this.tail 
-    let newTail = this.head
-    let current = newHead
-    let prevNode = current
-    let nextNode = current.next 
+    let current = this.head 
+    this.head = this.tail 
+    this.tail = current 
+    let prevNode = null
+    let nextNode = null 
 
-    while (current !== newTail){
-        current.next = prevNode
-        nextNode = current 
+    for (let i = 0; i < this.length; i++){
+        nextNode = current.next 
         
     }
 
