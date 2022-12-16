@@ -200,4 +200,28 @@ class SinglyLinkedList{
         return removeNode
     }
 
+   reverse(){
+    // reverse the linked list in place, aka not making a copy or duplicate
+    // swap head and tail
+    // variable for prevNode, nextNode, and current (initialize it to the head property)
+    // loop list
+    // set nextNode to be the next property on current
+    // set next property on current to be what prevNode is
+    // set preNode to be current
+    // set current to be the value of nextNode
+
+    let newHead = this.tail 
+    let newTail = this.head
+    let current = newHead
+    let prevNode = current
+    let nextNode = current.next 
+
+    while (current !== newTail){
+        current.next = prevNode
+        nextNode = current 
+        
+    }
+
+   } 
+
 }
